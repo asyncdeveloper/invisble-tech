@@ -4,9 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  }
 }
