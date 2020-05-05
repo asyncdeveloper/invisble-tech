@@ -4,19 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts",
+    "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts -d 'Lagos' ",
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts  --address 'Lagos' ",
     "build": "tsc",
-    "start": "npm run build && node dist/index.js"
+    "start": "npm run build && node dist/index.js -d 'Lagos'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^13.13.4",
+    "@types/yargs": "^15.0.4",
     "nodemon": "^2.0.3"
   },
   "dependencies": {
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "yargs": "^15.3.1"
   }
 }
