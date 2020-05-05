@@ -2,11 +2,14 @@
   "name": "invisble-tech",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts --address 'Lagos, London' ",
-    "build": "tsc",
-    "start": "npm run build && node dist/index.js -d 'Lagos'"
+    "build": "tsc -p .",
+    "setup": "npm run build && npm link"
+  },
+  "bin": {
+    "weather": "./dist/index.js"
   },
   "keywords": [],
   "author": "",
