@@ -1,6 +1,6 @@
 import yargs = require('yargs');
 
-const argv: object = yargs
+const argv = yargs
     .usage("Usage: -d <name>")
     .options({
         address: {
