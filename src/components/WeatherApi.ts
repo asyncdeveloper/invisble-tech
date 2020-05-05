@@ -15,11 +15,6 @@ class WeatherApi extends Api {
         this.apiKey = process.env.WEATHER_API_KEY;
     }
 
-    /**
-     * Get Weather information from an HTTP GET Request
-     * @param {String} location - address
-     * @returns {Object} data - location information,
-     */
     public async getWeatherFromLocation(location: string) {
         const weatherEndpoint: string = apiConfig.baseURL + `?key=${this.apiKey}&q=${location}`;
 
