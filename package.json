@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts -d 'Lagos' ",
-    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts  --address 'Lagos' ",
+    "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts --address 'Lagos, London' ",
     "build": "tsc",
     "start": "npm run build && node dist/index.js -d 'Lagos'"
   },
@@ -18,6 +17,7 @@
     "nodemon": "^2.0.3"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3",
     "yargs": "^15.3.1"
